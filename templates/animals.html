@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animals</title>
+	</head>
+	<body>
+		<h1>Animals in Amboseli</h1>
+		<ul>
+			{% for animal in animals %}
+			<li>{{ animal.name }} ({{ animal.species }}) - Population: {{ animal.population }}</li>
+			{% endfor %}
+		</ul>
+		<a href="{{ url_for('add_animal') }}">Add Animal</a>
+	</body>
+</html>
